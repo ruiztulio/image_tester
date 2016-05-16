@@ -1,0 +1,19 @@
+
+odoo80:
+  ports:
+    - "8069"
+    - "8072"
+  image: yoytec80
+  container_name: test_yoytec80
+  hostname: test_yoytec80
+  command: "/entry_point.py"
+  mem_limit: "1024MB"
+  environment:
+    - DB_HOST=172.17.0.1
+    - DBFILTER=.*
+    - ODOO_CONFIG_FILE=/home/odoo/.openerp_serverrc
+    - DB_USER=truiz
+    - DB_PASSWORD=truiz
+    - ADMIN_PASSWD=KtCY
+    - ODOO_USER=odoo
+        
